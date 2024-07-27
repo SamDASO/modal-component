@@ -1,9 +1,12 @@
 {
-  "name": "modal-component",
+  "name": "@SamDASO/modal-component",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/SamDASO"
+  },
   "version": "1.0.0",
   "description": "A generic modal component for React projects",
   "scripts": {
-  "rollup": "rollup -c"
+    "rollup": "rollup -c"
   },
   "author": "Samanta DA SILVA",
   "license": "ISC",
@@ -14,6 +17,7 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.3",
     "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rollup-plugin-dts": "^6.1.1",
     "sass": "^1.77.8",
     "typescript": "^5.5.4"
@@ -24,9 +28,12 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  
   "dependencies": {
     "jest-environment-jsdom": "^29.7.0",
     "tslib": "^2.6.3"
+  },
+
+  "peerDependencies": {
+    "react": "^18.3.1"
   }
 }
