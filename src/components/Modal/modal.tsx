@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useRef } from "react";
-//import styles from "./modal.module.scss";
+import styles from "./modal.css"
 
 export interface ModalProps {
   style?: string;
@@ -52,8 +52,8 @@ const Modal: React.FC<ModalProps> = ({style, isOpen, onClose, children}) => {
     }
   }, [isOpen, onClose]);
 
-  // const dialogClass = style || styles.dialogDefault;
-  const dialogClass = style
+  const dialogClass = style || styles.dialogDefault;
+  
   
   if (!isOpen) {
     return null;
