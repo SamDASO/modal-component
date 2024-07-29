@@ -1,9 +1,9 @@
 {
-  "name": "@SamDASO/modal-component",
+  "name": "@samdaso/modal-component",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/SamDASO"
+    "registry": "https://npm.pkg.github.com/samdaso"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A generic modal component for React projects",
   "scripts": {
     "rollup": "rollup -c"
