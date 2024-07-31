@@ -3,25 +3,19 @@ import { useEffect, useRef } from "react";
 import styles from "./modal.css"
 
 export interface ModalProps {
-  style?: string;
+  /**The class to style the dialog part of the modal. with ::backdrop it's possible to style the background. If indicated, overwrite the default style.*/
+  className?: string;
+  /**Determines if the modal is open.*/
   isOpen: boolean;
+  /**The callback function to close the modal.*/
   onClose: () => void;
+  /**The content to be displayed inside the modal. */
   children: React.ReactNode;
 
 }
 
-/**
- * Modal component that renders its children inside a modal dialog. It's disable the overflow in the body when active.
- *
- * @param {Object} props - The component props.
- * @param {string} props.style - The class to style the dialog part of the modal. with ::backdrop it's possible to style the background.
- * @param {boolean} props.isOpen - Determines if the modal is open.
- * @param {Function} props.onClose - The callback function to close the modal.
- * @param {React.ReactNode} props.children - The content to be displayed inside the modal.
- * @returns {JSX.Element|null} The rendered modal component or null if not open.
-*/
 
-const Modal: React.FC<ModalProps> = ({style, isOpen, onClose, children}) => {
+const Modal: React.FC<ModalProps> = ({className, isOpen, onClose, children}) => {
   const dialogValue = useRef<HTMLDialogElement | null>(null);
 
   useEffect(() => {
@@ -52,7 +46,7 @@ const Modal: React.FC<ModalProps> = ({style, isOpen, onClose, children}) => {
     }
   }, [isOpen, onClose]);
 
-  const dialogClass = style || styles.dialogDefault;
+  const dialogClass = className || styles.dialogDefault;
   
   
   if (!isOpen) {
