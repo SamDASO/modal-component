@@ -47,8 +47,7 @@ const Modal: React.FC<ModalProps> = ({className, isOpen, onClose, children}) => 
   }, [isOpen, onClose]);
 
   const dialogClass = className || styles.dialogDefault;
-  
-  
+    
   if (!isOpen) {
     return null;
   }

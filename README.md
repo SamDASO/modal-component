@@ -31,8 +31,8 @@ import  { Modal } from "@samdaso/modal-component";
 ```
 ## Props
 
-**style** (string):
-the modal has a style by default. If you want to change that, you can use this props to add a style for the dialog element and/or the ::backdrop pseudo-element
+**className** (string):
+If indicated, overwrite the default style. If you want to change the default style, you can use this prop to add a style for the dialog element and/or the ::backdrop pseudo-element to change the background. 
 
 **isOpen** (boolean):
 Determines the state of the modal. 

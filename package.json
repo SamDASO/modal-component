@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/samdaso"
   },
-  "version": "3.0.1",
+  "version": "4.0.1",
   "description": "A generic modal component for React projects",
   "scripts": {
     "rollup": "rollup -c"
