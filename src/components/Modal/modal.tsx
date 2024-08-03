@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useRef } from "react";
-import styles from "./modal.css"
+import styles from "./modal.module.css"
 
 export interface ModalProps {
   /**The class to style the dialog part of the modal. with ::backdrop it's possible to style the background. If indicated, overwrite the default style.*/

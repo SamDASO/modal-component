@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/samdaso"
   },
-  "version": "4.0.1",
+  "version": "5.0.5",
   "description": "A generic modal component for React projects",
   "scripts": {
     "rollup": "rollup -c"
@@ -31,9 +31,11 @@
   ],
   "types": "dist/index.d.ts",
   "dependencies": {
-    "jest-environment-jsdom": "^29.7.0"
-     },
-
+    "@rollup/plugin-terser": "^0.4.4",
+    "jest-environment-jsdom": "^29.7.0",
+    "postcss-import": "^16.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
   "peerDependencies": {
     "react": "^18.3.1",
     "tslib": "^2.6.3"
