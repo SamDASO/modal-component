@@ -18,33 +18,36 @@ export interface ModalProps {
 const Modal: React.FC<ModalProps> = ({className, isOpen, onClose, children}) => {
   const dialogValue = useRef<HTMLDialogElement | null>(null);
 
+  const handleClose = () => {
+    if (typeof onClose === "function") {
+      onClose();
+      document.body.style.overflow = '';
+    }
+    
+  };
+
   useEffect(() => {
     const dialogElement = dialogValue.current;
 
-    if (dialogElement) {
-      if (isOpen) {
-        dialogElement.showModal();
-        document.body.style.overflow = 'hidden';
-      } else {
-        dialogElement.close();
-        document.body.style.overflow = '';
-      }
-
-      const handleClose = () => {
-        if (onClose) {
-          onClose();
-        }
-        document.body.style.overflow = '';
-      };
-
-      dialogElement.addEventListener('close', handleClose);
-
-      return () => {
-        dialogElement.removeEventListener('close', handleClose);
-        document.body.style.overflow = '';
-      };
+    if (!dialogElement) {
+      return;
     }
-  }, [isOpen, onClose]);
+
+    if (isOpen) {
+      dialogElement.showModal();
+      dialogElement.addEventListener('close', handleClose);
+      document.body.style.overflow = 'hidden';
+    } 
+      
+    return () => {
+      dialogElement.removeEventListener('close', handleClose);
+      document.body.style.overflow = '';
+      if (dialogElement.open) {
+        dialogElement.close();
+      }
+    };
+    
+  }, [isOpen]);
 
   const dialogClass = className || styles.dialogDefault;
     
