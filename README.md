@@ -66,7 +66,7 @@ import  { Modal } from "@samdaso/modal-component";
 
 ### Example
 ```jsx
-<Modal isOpen={isModalOpen} onClose={closeModal} style={styles.modal}>
+<Modal isOpen={isModalOpen} onClose={closeModal} className={styles.modal}>
     <p>{modalMessage}</p>
     <Button onClick={closeModal}>Close</Button>
 </Modal>
