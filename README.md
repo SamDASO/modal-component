@@ -27,12 +27,18 @@ Replace **YOUR_PERSONAL_ACCESS_TOKEN** with the token you generated in the previ
 
 ### 3. Install the **Modal-component** package in your project
 
+#### **Requirements (minimal):**
 ```bash
-npm install @samdaso/modal-component
+React   v18.3.1
+Node    v20 
+```
+#### **Command**
+```bash
+npm install @SamDASO/modal-component
 ```
 or 
 ```bash
-yarn add @samdaso/modal-component
+yarn add @SamDASO/modal-component
 ```
 
 ## Importing Styles
@@ -45,7 +51,7 @@ If your project is using CommonJS (e.g., Node.js), import the CSS file from the 
 
 ```javascript
 // Import CSS for CommonJS environment
-import '@samdaso/modal-component/dist/cjs/index.css';
+import '@SamDASO/modal-component/dist/cjs/index.css';
 ```
 
 ### For ES Modules Projects
@@ -54,14 +60,14 @@ If your project is using ES Modules (e.g., a modern front-end application with W
 
 ```javascript
 // Import CSS for ES Modules environment
-import '@samdaso/modal-component/dist/esm/index.css';
+import '@SamDASO/modal-component/dist/esm/index.css';
 ```
 
 ## Usage
 
 ### **Import the component**
 ```javascript
-import  { Modal } from "@samdaso/modal-component";
+import  { Modal } from "@SamDASO/modal-component";
 ```
 
 ### Example
